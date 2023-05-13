@@ -4,6 +4,7 @@ import { RegisterModal } from "./components/RegisterModal";
 import "./globals.css";
 import { Nunito } from "next/font/google";
 import { ToasterProvider } from "./providers/ToasterProvider";
+import { LoginModal } from "./components/LoginModal";
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={font.className}>
         <ClientOnly>
           <ToasterProvider />
+          <LoginModal />
           <RegisterModal />
           <Navbarr />
         </ClientOnly>
