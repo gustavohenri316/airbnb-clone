@@ -1,0 +1,106 @@
+{
+  "translation": {
+    "Beach": {
+      "label": "Beach",
+      "description": "This property is close to the beach!"
+    },
+    "Windmills": {
+      "label": "Windmills",
+      "description": "This property has windmills!"
+    },
+    "Modern": {
+      "label": "Modern",
+      "description": "This property is modern!"
+    },
+    "Countryside": {
+      "label": "Countryside",
+      "description": "This property is in the countryside!"
+    },
+    "Pools": {
+      "label": "Pools",
+      "description": "This property has a beautiful pool!"
+    },
+    "Islands": {
+      "label": "Islands",
+      "description": "This property is on an island!"
+    },
+    "Lake": {
+      "label": "Lake",
+      "description": "This property is near a lake!"
+    },
+    "Skiing": {
+      "label": "Skiing",
+      "description": "This property has skiing activities!"
+    },
+    "Castles": {
+      "label": "Castles",
+      "description": "This property is an ancient castle!"
+    },
+    "Caves": {
+      "label": "Caves",
+      "description": "This property is in a spooky cave!"
+    },
+    "Camping": {
+      "label": "Camping",
+      "description": "This property offers camping activities!"
+    },
+    "Arctic": {
+      "label": "Arctic",
+      "description": "This property is in an arctic environment!"
+    },
+    "Desert": {
+      "label": "Desert",
+      "description": "This property is in the desert!"
+    },
+    "Barns": {
+      "label": "Barns",
+      "description": "This property is in a barn!"
+    },
+    "Lux": {
+      "label": "Lux",
+      "description": "This property is brand new and luxurious!"
+    },
+    "LoginModal": {
+      "googleButton": "Continue with Google",
+      "githubButton": "Continue with Github",
+      "firstTime": "First time using Airbnb?",
+      "createAccount": "Create an account",
+      "title": "Login",
+      "continueButton": "Continue",
+      "loggedIn": "Logged in",
+      "welcomeTitle": "Welcome back",
+      "loginSubtitle": "Login to your account!",
+      "emailLabel": "Email",
+      "passwordLabel": "Password"
+    },
+    "RegisterModal": {
+      "welcomeTitle": "Welcome to Airbnb",
+      "createAccountSubtitle": "Create an account!",
+      "emailLabel": "Email",
+      "nameLabel": "Name",
+      "passwordLabel": "Password",
+      "continueGoogle": "Continue with Google",
+      "continueGitHub": "Continue with GitHub",
+      "alreadyHaveAccount": "Already have an account?",
+      "login": "Login",
+      "title": "Register",
+      "continueButton": "Continue"
+    },
+    "UserMenu": {
+      "airbnbYourHome": "Airbnb your home",
+      "myTrips": "My trips",
+      "myFavorites": "My favorites",
+      "myReservations": "My reservations",
+      "myProperties": "My properties",
+      "airbnbMyHome": "Airbnb my home",
+      "logout": "Logout",
+      "login": "Login",
+      "signUp": "Sign up"
+    },
+    "Search": {
+      "anywhere": "Anywhere",
+      "anyWeek": "Any Week",
+      "addGuests": "Add Guests"
+    }
+  }
+}

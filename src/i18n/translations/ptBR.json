@@ -1,0 +1,106 @@
+{
+  "translation": {
+    "Beach": {
+      "label": "Praia",
+      "description": "Esta propriedade está perto da praia!"
+    },
+    "Windmills": {
+      "label": "Moinhos de Vento",
+      "description": "Esta propriedade possui moinhos de vento!"
+    },
+    "Modern": {
+      "label": "Moderno",
+      "description": "Esta propriedade é moderna!"
+    },
+    "Countryside": {
+      "label": "Campo",
+      "description": "Esta propriedade está no campo!"
+    },
+    "Pools": {
+      "label": "Piscinas",
+      "description": "Esta propriedade possui uma bela piscina!"
+    },
+    "Islands": {
+      "label": "Ilhas",
+      "description": "Esta propriedade está em uma ilha!"
+    },
+    "Lake": {
+      "label": "Lago",
+      "description": "Esta propriedade está perto de um lago!"
+    },
+    "Skiing": {
+      "label": "Esqui",
+      "description": "Esta propriedade possui atividades de esqui!"
+    },
+    "Castles": {
+      "label": "Castelos",
+      "description": "Esta propriedade é um castelo antigo!"
+    },
+    "Caves": {
+      "label": "Cavernas",
+      "description": "Esta propriedade está em uma caverna assustadora!"
+    },
+    "Camping": {
+      "label": "Acampamento",
+      "description": "Esta propriedade oferece atividades de acampamento!"
+    },
+    "Arctic": {
+      "label": "Ártico",
+      "description": "Esta propriedade está em um ambiente ártico!"
+    },
+    "Desert": {
+      "label": "Deserto",
+      "description": "Esta propriedade está no deserto!"
+    },
+    "Barns": {
+      "label": "Celeiros",
+      "description": "Esta propriedade está em um celeiro!"
+    },
+    "Lux": {
+      "label": "Luxo",
+      "description": "Esta propriedade é nova e luxuosa!"
+    },
+    "LoginModal": {
+      "googleButton": "Continuar com o Google",
+      "githubButton": "Continuar com o Github",
+      "firstTime": "Primeira vez usando o Airbnb?",
+      "createAccount": "Criar uma conta",
+      "title": "Entrar",
+      "continueButton": "Continuar",
+      "loggedIn": "Logado",
+      "welcomeTitle": "Bem-vindo de volta",
+      "loginSubtitle": "Faça login na sua conta!",
+      "emailLabel": "E-mail",
+      "passwordLabel": "Senha"
+    },
+    "RegisterModal": {
+      "welcomeTitle": "Bem-vindo ao Airbnb",
+      "createAccountSubtitle": "Crie uma conta!",
+      "emailLabel": "E-mail",
+      "nameLabel": "Nome",
+      "passwordLabel": "Senha",
+      "continueGoogle": "Continuar com o Google",
+      "continueGitHub": "Continuar com o GitHub",
+      "alreadyHaveAccount": "Já tem uma conta?",
+      "login": "Login",
+      "title": "Registrar",
+      "continueButton": "Continuar"
+    },
+    "UserMenu": {
+      "airbnbYourHome": "Airbnb sua casa",
+      "myTrips": "Minhas viagens",
+      "myFavorites": "Meus favoritos",
+      "myReservations": "Minhas reservas",
+      "myProperties": "Meus imóveis",
+      "airbnbMyHome": "Airbnb minha casa",
+      "logout": "Sair",
+      "login": "Entrar",
+      "signUp": "Registrar-se"
+    },
+    "Search": {
+      "anywhere": "Qualquer lugar",
+      "anyWeek": "Qualquer semana",
+      "addGuests": "Adicionar convidados"
+    }
+  }
+}

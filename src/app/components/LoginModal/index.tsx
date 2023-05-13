@@ -15,6 +15,7 @@ import { Modal } from "../Modal";
 import { Input } from "../Input";
 import { Heading } from "../Heading";
 import { Button } from "../Button";
+import { t } from "i18next";
 
 export const LoginModal = () => {
   const router = useRouter();
@@ -35,36 +36,36 @@ export const LoginModal = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
-
+  
     signIn("credentials", {
       ...data,
       redirect: false,
     }).then((callback) => {
       setIsLoading(false);
-
+  
       if (callback?.ok) {
-        toast.success("Logged in");
+        toast.success(t('LoginModal.loggedIn'));
         router.refresh();
         loginModal.onClose();
       }
-
+  
       if (callback?.error) {
         toast.error(callback.error);
       }
     });
   };
-
+  
   const onToggle = useCallback(() => {
     loginModal.onClose();
     registerModal.onOpen();
   }, [loginModal, registerModal]);
-
+  
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <Heading title="Welcome back" subtitle="Login to your account!" />
+      <Heading title={t('LoginModal.welcomeTitle')} subtitle={t('LoginModal.loginSubtitle') as string} />
       <Input
         id="email"
-        label="Email"
+        label={t('LoginModal.emailLabel')}
         disabled={isLoading}
         register={register}
         errors={errors}
@@ -72,7 +73,7 @@ export const LoginModal = () => {
       />
       <Input
         id="password"
-        label="Password"
+        label={t('LoginModal.passwordLabel')}
         type="password"
         disabled={isLoading}
         register={register}
@@ -87,44 +88,36 @@ export const LoginModal = () => {
       <hr />
       <Button
         outline
-        label="Continue with Google"
+        label={t('LoginModal.googleButton')}
         icon={FcGoogle}
         onClick={() => signIn("google")}
       />
       <Button
         outline
-        label="Continue with Github"
+        label={t('LoginModal.githubButton')}
         icon={AiFillGithub}
         onClick={() => signIn("github")}
       />
-      <div
-        className="
-      text-neutral-500 text-center mt-4 font-light"
-      >
+      <div className="text-neutral-500 text-center mt-4 font-light">
         <p>
-          First time using Airbnb?
+          {t('LoginModal.firstTime')}
           <span
             onClick={onToggle}
-            className="
-              text-neutral-800
-              cursor-pointer 
-              hover:underline
-            "
-          >
-            {" "}
-            Create an account
+            className="text-neutral-800 cursor-pointer hover:underline"
+          >{' '}
+            {t('LoginModal.createAccount')}
           </span>
         </p>
       </div>
     </div>
   );
-
+  
   return (
     <Modal
       disabled={isLoading}
       isOpen={loginModal.isOpen}
-      title="Login"
-      actionLabel="Continue"
+      title={t('LoginModal.title') as string}
+      actionLabel={t('LoginModal.continueButton') as string}
       onClose={loginModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}

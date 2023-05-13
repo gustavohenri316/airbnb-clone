@@ -1,11 +1,11 @@
 import { ClientOnly } from "./components/ClientOnly";
 import { Navbar } from "./components/Navbar";
 import { RegisterModal } from "./components/RegisterModal";
-import "./globals.css";
 import { Nunito } from "next/font/google";
 import { ToasterProvider } from "./providers/ToasterProvider";
 import { LoginModal } from "./components/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
+import "./globals.css";
 
 const font = Nunito({ subsets: ["latin"] });
 

@@ -10,8 +10,10 @@ import { FcGoogle } from "react-icons/fc";
 import { Modal } from "../Modal";
 import { Heading } from "../Heading";
 import { Input } from "../Input";
-import { toast } from 'react-hot-toast'
+import { toast } from "react-hot-toast";
 import { Button } from "../Button";
+import { signIn } from "next-auth/react";
+import { t } from "i18next";
 
 export const RegisterModal = () => {
   const registerModal = useRegisterModal();
@@ -38,7 +40,7 @@ export const RegisterModal = () => {
         registerModal.onClose();
       })
       .catch((err) => {
-        toast.error('Something went wrong.')
+        toast.error("Something went wrong.");
       })
       .finally(() => {
         setIsLoading(false);
@@ -46,10 +48,13 @@ export const RegisterModal = () => {
   };
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <Heading title="Welcome to Airbnb" subtitle="Create an account!" />
+      <Heading
+        title={t("RegisterModal.welcomeTitle")}
+        subtitle={t("RegisterModal.createAccountSubtitle") as string}
+      />
       <Input
         id="email"
-        label="Email"
+        label={t("RegisterModal.emailLabel")}
         disabled={isLoading}
         register={register}
         errors={errors}
@@ -57,7 +62,7 @@ export const RegisterModal = () => {
       />
       <Input
         id="name"
-        label="Name"
+        label={t("RegisterModal.nameLabel")}
         disabled={isLoading}
         register={register}
         errors={errors}
@@ -66,7 +71,7 @@ export const RegisterModal = () => {
       <Input
         id="password"
         type="password"
-        label="Password"
+        label={t("RegisterModal.passwordLabel")}
         disabled={isLoading}
         register={register}
         errors={errors}
@@ -80,30 +85,35 @@ export const RegisterModal = () => {
       <hr />
       <Button
         outline
-        label="Continue with Google"
+        label={t("RegisterModal.continueGoogle")}
         icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => signIn("google")}
       />
       <Button
         outline
-        label="Continue with GitHub"
+        label={t("RegisterModal.continueGitHub")}
         icon={AiFillGithub}
-        onClick={() => {}}
+        onClick={() => signIn("github")}
       />
       <div className="justify-center flex items-center  mt-4 font-light">
         <div className=" flex flex-row items-center gap-2">
-          <div>Already have an account?</div>
-          <div onClick={registerModal.onClose} className="text-neutral-800 cursor-pointer hover:underline">Login</div>
+          <div>{t("RegisterModal.alreadyHaveAccount")}</div>
+          <div
+            onClick={registerModal.onClose}
+            className="text-neutral-800 cursor-pointer hover:underline"
+          >
+            {t("RegisterModal.login")}
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
   return (
     <Modal
       disabled={isLoading}
       isOpen={registerModal.isOpen}
-      title="Register"
-      actionLabel="Continue"
+      title={t("RegisterModal.title") as string}
+      actionLabel={t("RegisterModal.continueButton") as string}
       onClose={registerModal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}

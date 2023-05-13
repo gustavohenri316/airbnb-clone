@@ -67,3 +67,10 @@ export interface RegisterModalStore {
   onOpen: () => void;
   onClose: () => void;
 }
+
+
+export interface CategoryBoxProps {
+  label: string;
+  icon: IconType;
+  selected?: boolean;
+}
