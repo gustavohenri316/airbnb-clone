@@ -6,12 +6,17 @@ import { Modal } from "../Modal";
 import { Heading } from "../Heading";
 import { categories } from "@/app/assets/categories";
 import { CategoryInput } from "../CategoryInput";
-import { FieldValues, useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import { CountrySelect } from "../CountrySelect";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { Map } from "../Map";
 import { t } from "i18next";
+import { Counter } from "../Counter";
+import { ImageUpload } from "../ImageUpload";
+import { Input } from "../Input";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 enum STEPS {
   CATEGORY = 0,
@@ -58,7 +63,6 @@ export const RentModal: React.FC<RentModalProps> = () => {
   const bathroomCount = watch("bathroomCount");
   const imageSrc = watch("imageSrc");
 
-
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
       shouldDirty: true,
@@ -74,6 +78,30 @@ export const RentModal: React.FC<RentModalProps> = () => {
   const onNext = () => {
     setStep((value) => value + 1);
   };
+
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    if (step !== STEPS.PRICE) {
+      return onNext();
+    }
+    
+    setIsLoading(true);
+
+    axios.post('/api/listings', data)
+    .then(() => {
+      toast.success('Listing created!');
+      router.refresh();
+      reset();
+      setStep(STEPS.CATEGORY)
+      rentModal.onClose();
+    })
+    .catch(() => {
+      toast.error('Something went wrong.');
+    })
+    .finally(() => {
+      setIsLoading(false);
+    })
+  }
+
   const actionLabel = useMemo(() => {
     if (step === STEPS.PRICE) {
       return t("rentModal.actionLabel.create");
@@ -81,7 +109,7 @@ export const RentModal: React.FC<RentModalProps> = () => {
 
     return t("rentModal.actionLabel.next");
   }, [step]);
- 
+
   const secondaryActionLabel = useMemo(() => {
     if (step === STEPS.CATEGORY) {
       return undefined;
@@ -133,26 +161,26 @@ export const RentModal: React.FC<RentModalProps> = () => {
           title={t("rentModal.basicInfo.title")}
           subtitle={t("rentModal.basicInfo.subtitle") as string}
         />
-        {/* <Counter 
-          onChange={(value) => setCustomValue('guestCount', value)}
+        <Counter
+          onChange={(value) => setCustomValue("guestCount", value)}
           value={guestCount}
           title={t("rentModal.guests.title")}
           subtitle={t("rentModal.guests.subtitle")}
         />
         <hr />
-        <Counter 
-          onChange={(value) => setCustomValue('roomCount', value)}
+        <Counter
+          onChange={(value) => setCustomValue("roomCount", value)}
           value={roomCount}
           title={t("rentModal.rooms.title")}
           subtitle={t("rentModal.rooms.subtitle")}
         />
         <hr />
-        <Counter 
-          onChange={(value) => setCustomValue('bathroomCount', value)}
+        <Counter
+          onChange={(value) => setCustomValue("bathroomCount", value)}
           value={bathroomCount}
           title={t("rentModal.bathrooms.title")}
           subtitle={t("rentModal.bathrooms.subtitle")}
-        /> */}
+        />
       </div>
     );
   }
@@ -163,10 +191,10 @@ export const RentModal: React.FC<RentModalProps> = () => {
           title={t("rentModal.addPhoto.title")}
           subtitle={t("rentModal.addPhoto.subtitle") as string}
         />
-        {/* <ImageUpload
-          onChange={(value) => setCustomValue('imageSrc', value)}
+        <ImageUpload
+          onChange={(value) => setCustomValue("imageSrc", value)}
           value={imageSrc}
-        /> */}
+        />
       </div>
     );
   }
@@ -178,7 +206,7 @@ export const RentModal: React.FC<RentModalProps> = () => {
           title={t("rentModal.describePlace.title")}
           subtitle={t("rentModal.describePlace.subtitle") as string}
         />
-        {/* <Input
+        <Input
           id="title"
           label={t("rentModal.describePlace.labelTitle")}
           disabled={isLoading}
@@ -194,7 +222,7 @@ export const RentModal: React.FC<RentModalProps> = () => {
           register={register}
           errors={errors}
           required
-        /> */}
+        />
       </div>
     );
   }
@@ -206,16 +234,16 @@ export const RentModal: React.FC<RentModalProps> = () => {
           title={t("rentModal.setPrice.title")}
           subtitle={t("rentModal.setPrice.subtitle") as string}
         />
-        {/* <Input
+        <Input
           id="price"
           label={t("rentModal.setPrice.labelPrice")}
-          formatPrice 
-          type="number" 
+          formatPrice
+          type="number"
           disabled={isLoading}
           register={register}
           errors={errors}
           required
-        /> */}
+        />
       </div>
     );
   }
