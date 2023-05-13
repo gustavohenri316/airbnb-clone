@@ -1,13 +1,6 @@
 "use client";
-import { IconType } from "react-icons";
-interface ButtonProps {
-  label: string;
-  onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-  disabled?: boolean;
-  outline?: boolean;
-  small?: boolean;
-  icon?: IconType;
-}
+import { ButtonProps } from "@/app/types";
+
 export const Button: React.FC<ButtonProps> = ({
   label,
   onClick,

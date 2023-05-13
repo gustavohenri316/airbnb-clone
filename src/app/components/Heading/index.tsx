@@ -1,10 +1,6 @@
 "use client";
+import { HeadingProps } from "@/app/types";
 
-interface HeadingProps {
-  title: string;
-  subtitle?: string;
-  center?: boolean;
-}
 export const Heading: React.FC<HeadingProps> = ({
   title,
   center,

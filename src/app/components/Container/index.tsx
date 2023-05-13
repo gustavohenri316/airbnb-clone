@@ -1,8 +1,6 @@
 "use client";
 
-interface ContainerProps {
-  children: React.ReactNode;
-}
+import { ContainerProps } from "@/app/types";
 
 export const Container: React.FC<ContainerProps> = ({ children }) => {
   return (

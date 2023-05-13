@@ -1,10 +1,5 @@
 import { create } from "zustand";
-
-interface RegisterModalStore {
-  isOpen: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-}
+import { RegisterModalStore } from "../types";
 
 export const useRegisterModal = create<RegisterModalStore>((set) => ({
   isOpen: false,

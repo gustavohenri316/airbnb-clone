@@ -1,9 +1,6 @@
 "use client";
+import { ClientOnlyProps } from "@/app/types";
 import { useEffect, useState } from "react";
-
-interface ClientOnlyProps {
-  children: React.ReactNode;
-}
 
 export const ClientOnly: React.FC<ClientOnlyProps> = ({ children }) => {
   const [hasMounted, setHasMounted] = useState(false);
