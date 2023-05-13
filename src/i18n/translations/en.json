@@ -101,6 +101,53 @@
       "anywhere": "Anywhere",
       "anyWeek": "Any Week",
       "addGuests": "Add Guests"
+    },
+    "rentModal": {
+      "placeDescription": {
+        "title": "Which of these best describes your place?",
+        "subtitle": "Pick a category"
+      },
+      "location": {
+        "title": "Where is your place located?",
+        "subtitle": "Help guests find you!"
+      },
+      "basicInfo": {
+        "title": "Share some basics about your place",
+        "subtitle": "What amenities do you have?"
+      },
+      "guests": {
+        "title": "Guests",
+        "subtitle": "How many guests do you allow?"
+      },
+      "rooms": {
+        "title": "Rooms",
+        "subtitle": "How many rooms do you have?"
+      },
+      "bathrooms": {
+        "title": "Bathrooms",
+        "subtitle": "How many bathrooms do you have?"
+      },
+      "addPhoto": {
+        "title": "Add a photo of your place",
+        "subtitle": "Show guests what your place looks like!"
+      },
+      "describePlace": {
+        "title": "How would you describe your place?",
+        "subtitle": "Short and sweet works best!",
+        "labelTitle": "Title",
+        "labelDescription": "Description"
+      },
+      "setPrice": {
+        "title": "Now, set your price",
+        "subtitle": "How much do you charge per night?",
+        "labelPrice": "Price"
+      },
+      "modalTitle": "Airbnb your home!",
+      "actionLabel": {
+        "create": "Create",
+        "next": "Next",
+        "back": "Back"
+      }
     }
   }
 }

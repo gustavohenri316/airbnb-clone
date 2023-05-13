@@ -56,13 +56,7 @@ export interface MenuItemProps {
   label: string;
 }
 
-export interface LoginModalStore {
-  isOpen: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-}
-
-export interface RegisterModalStore {
+export interface ModalStore {
   isOpen: boolean;
   onOpen: () => void;
   onClose: () => void;
@@ -73,4 +67,34 @@ export interface CategoryBoxProps {
   label: string;
   icon: IconType;
   selected?: boolean;
+}
+
+export type CountrySelectValue = {
+  flag: string;
+  label: string;
+  latlng: number[];
+  region: string;
+  value: string;
+};
+
+export interface CountrySelectProps {
+  value?: CountrySelectValue;
+  onChange: (value: CountrySelectValue) => void;
+}
+
+export interface CounterProps {
+  title: string;
+  subtitle: string;
+  value: number;
+  onChange: (value: number) => void;
+}
+
+export interface MapProps {
+  center?: number[];
+}
+export interface CategoryInputProps {
+  onClick: (value: string) => void;
+  selected?: boolean;
+  icon: IconType;
+  label: string;
 }

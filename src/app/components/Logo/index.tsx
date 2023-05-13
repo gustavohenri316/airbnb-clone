@@ -8,13 +8,15 @@ export const Logo: React.FC = () => {
   return (
     <div>
       <Image
+        onClick={() => router.push("/")}
         src="/images/logo.png"
         className="hidden md:block cursor-pointer"
-        width='100'
-        height='100'
+        width="100"
+        height="100"
         alt="logo"
       />
     </div>
   );
   return <div>oi</div>;
 };
+0

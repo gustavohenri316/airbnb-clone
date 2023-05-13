@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
 import qs from "query-string";
@@ -14,20 +15,16 @@ export const CategoryBox: React.FC<CategoryBoxProps> = ({
 
   const handleClick = useCallback(() => {
     let currentQuery = {};
-
     if (params) {
       currentQuery = qs.parse(params.toString());
     }
-
     const updatedQuery: any = {
       ...currentQuery,
       category: label,
     };
-
     if (params?.get("category") === label) {
       delete updatedQuery.category;
     }
-
     const url = qs.stringifyUrl(
       {
         url: "/",
@@ -35,7 +32,6 @@ export const CategoryBox: React.FC<CategoryBoxProps> = ({
       },
       { skipNull: true }
     );
-
     router.push(url);
   }, [label, params, router]);
 

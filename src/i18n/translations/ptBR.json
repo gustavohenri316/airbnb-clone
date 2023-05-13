@@ -101,6 +101,53 @@
       "anywhere": "Qualquer lugar",
       "anyWeek": "Qualquer semana",
       "addGuests": "Adicionar convidados"
+    },
+    "rentModal": {
+      "placeDescription": {
+        "title": "Qual destas opções melhor descreve o seu lugar?",
+        "subtitle": "Escolha uma categoria"
+      },
+      "location": {
+        "title": "Onde está localizado o seu lugar?",
+        "subtitle": "Ajude os hóspedes a encontrá-lo!"
+      },
+      "basicInfo": {
+        "title": "Compartilhe algumas informações básicas sobre o seu lugar",
+        "subtitle": "Quais comodidades você possui?"
+      },
+      "guests": {
+        "title": "Hóspedes",
+        "subtitle": "Quantos hóspedes você permite?"
+      },
+      "rooms": {
+        "title": "Quartos",
+        "subtitle": "Quantos quartos você possui?"
+      },
+      "bathrooms": {
+        "title": "Banheiros",
+        "subtitle": "Quantos banheiros você possui?"
+      },
+      "addPhoto": {
+        "title": "Adicione uma foto do seu lugar",
+        "subtitle": "Mostre aos hóspedes como é o seu lugar!"
+      },
+      "describePlace": {
+        "title": "Como você descreveria o seu lugar?",
+        "subtitle": "Curto e objetivo funciona melhor!",
+        "labelTitle": "Título",
+        "labelDescription": "Descrição"
+      },
+      "setPrice": {
+        "title": "Agora, defina o preço",
+        "subtitle": "Quanto você cobra por noite?",
+        "labelPrice": "Preço"
+      },
+      "modalTitle": "Alugue sua casa no Airbnb!",
+      "actionLabel": {
+        "create": "Criar",
+        "next": "Próximo",
+        "back": "Voltar"
+      }
     }
   }
 }
