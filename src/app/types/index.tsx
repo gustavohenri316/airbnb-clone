@@ -1,6 +1,7 @@
 import { IconType } from "react-icons";
 import { UseFormRegister, FieldValues, FieldErrors } from "react-hook-form";
 import { Listing, Reservation, User } from "@prisma/client";
+import { RangeKeyDict, Range } from "react-date-range";
 
 export type SafeListing = Omit<Listing, "createdAt"> & {
   createdAt: string;
@@ -155,4 +156,40 @@ export interface ListingHeadProps {
   imageSrc: string;
   id: string;
   currentUser?: SafeUser | null;
+}
+
+export interface ListingInfoProps {
+  user: SafeUser,
+  description: string;
+  guestCount: number;
+  roomCount: number;
+  bathroomCount: number;
+  category: {
+    icon: IconType,
+    label: string;
+    description: string;
+  } | undefined
+  locationValue: string;
+}
+
+export interface ListingCategoryProps {
+  icon: IconType,
+  label: string,
+  description: string
+}
+
+export interface ListingReservationProps {
+  price: number;
+  dateRange: Range;
+  totalPrice: number;
+  onChangeDate: (value: Range) => void;
+  onSubmit: () => void;
+  disabled?: boolean;
+  disabledDates: Date[];
+}
+
+export interface DatePickerProps {
+  value: Range;
+  onChange: (value: RangeKeyDict) => void;
+  disabledDates?: Date[];
 }

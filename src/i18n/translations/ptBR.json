@@ -155,6 +155,13 @@
       "title": "Nenhum resultado exato",
       "subtitle": "Tente alterar ou remover alguns dos filtros",
       "label": "Remover todos os filtros"
+    },
+    "listingReservation": {
+      "price": "R$ ",
+      "night": "noite",
+      "reserve": "Reservar",
+      "total": "Total",
+      "totalPrice": "R$ "
     }
   }
 }

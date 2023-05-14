@@ -155,6 +155,13 @@
       "title": "No exact matches",
       "subtitle": "Try changing or removing some of your filters",
       "label": "Remove all filters"
+    },
+    "listingReservation": {
+      "price": "Price: $",
+      "night": "night",
+      "reserve": "Reserve",
+      "total": "Total",
+      "totalPrice": "$"
     }
   }
 }
