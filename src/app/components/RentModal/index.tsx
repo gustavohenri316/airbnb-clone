@@ -83,24 +83,25 @@ export const RentModal: React.FC<RentModalProps> = () => {
     if (step !== STEPS.PRICE) {
       return onNext();
     }
-    
+
     setIsLoading(true);
 
-    axios.post('/api/listings', data)
-    .then(() => {
-      toast.success('Listing created!');
-      router.refresh();
-      reset();
-      setStep(STEPS.CATEGORY)
-      rentModal.onClose();
-    })
-    .catch(() => {
-      toast.error('Something went wrong.');
-    })
-    .finally(() => {
-      setIsLoading(false);
-    })
-  }
+    axios
+      .post("/api/listings", data)
+      .then(() => {
+        toast.success("Listing created!");
+        router.refresh();
+        reset();
+        setStep(STEPS.CATEGORY);
+        rentModal.onClose();
+      })
+      .catch(() => {
+        toast.error("Something went wrong.");
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  };
 
   const actionLabel = useMemo(() => {
     if (step === STEPS.PRICE) {
@@ -250,13 +251,14 @@ export const RentModal: React.FC<RentModalProps> = () => {
 
   return (
     <Modal
+      disabled={isLoading}
       isOpen={rentModal.isOpen}
       title={t("rentModal.modalTitle") as string}
-      onClose={rentModal.onClose}
-      onSubmit={onNext}
       actionLabel={actionLabel}
+      onSubmit={handleSubmit(onSubmit)}
       secondaryActionLabel={secondaryActionLabel}
       secondaryAction={step === STEPS.CATEGORY ? undefined : onBack}
+      onClose={rentModal.onClose}
       body={bodyContent}
     />
   );
