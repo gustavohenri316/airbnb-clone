@@ -36,7 +36,7 @@ export const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
   }, [loginModal, rentModal, currentUser]);
 
   const handleLanguageChange = useCallback(() => {
-    const newLanguage = language === 'ptBR' ? 'en' : 'ptBR';
+    const newLanguage = language === "ptBR" ? "en" : "ptBR";
     setLanguage(newLanguage);
     i18n.changeLanguage(newLanguage);
     location.reload();
@@ -72,17 +72,20 @@ export const UserMenu: React.FC<UserMenuProps> = ({ currentUser }) => {
           <div className="flex flex-col cursor-pointer">
             {currentUser ? (
               <>
-                <MenuItem onClick={() => {}} label={t("UserMenu.myTrips")} />
                 <MenuItem
-                  onClick={() => {}}
+                  onClick={() => router.push("/trips")}
+                  label={t("UserMenu.myTrips")}
+                />
+                <MenuItem
+                  onClick={() => router.push("/favorites")}
                   label={t("UserMenu.myFavorites")}
                 />
                 <MenuItem
-                  onClick={() => {}}
+                  onClick={() => router.push("/reservations")}
                   label={t("UserMenu.myReservations")}
                 />
                 <MenuItem
-                  onClick={() => {}}
+                  onClick={() => router.push("/properties")}
                   label={t("UserMenu.myProperties")}
                 />
                 <MenuItem

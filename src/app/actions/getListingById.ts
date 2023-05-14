@@ -1,8 +1,6 @@
 import prisma from "../libs/prismadb";
+import { IParams } from "../types";
 
-interface IParams {
-  listingId?: string;
-}
 export default async function getListingById(
   params: IParams
 ) {

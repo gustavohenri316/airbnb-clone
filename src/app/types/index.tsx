@@ -193,3 +193,37 @@ export interface DatePickerProps {
   onChange: (value: RangeKeyDict) => void;
   disabledDates?: Date[];
 }
+
+export interface TripsClientProps {
+  reservations: SafeReservation[];
+  currentUser:  SafeUser | null | undefined;
+}
+export interface IParams {
+  listingId?: string;
+  reservationId?: string;
+  userId?: string;
+  authorId?: string;
+}
+
+export interface ModalProps {
+  isOpen?: boolean;
+  onClose: () => void;
+  onSubmit: () => void;
+  title?: string;
+  body?: React.ReactElement;
+  footer?: React.ReactElement;
+  actionLabel?: string;
+  disabled?: boolean;
+  secondaryAction?: () => void;
+  secondaryLabel?: string;
+  secondaryActionLabel?: string;
+}
+
+export interface ImageUploadProps {
+  onChange: (value: string) => void;
+  value: string;
+}
+
+export interface AvatarProps {
+  src: string | null | undefined
+}

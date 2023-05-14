@@ -162,6 +162,26 @@
       "reserve": "Reservar",
       "total": "Total",
       "totalPrice": "R$ "
-    }
+    },
+    "trips": {
+      "title": "Viagens",
+      "subtitle": "Onde você esteve e para onde está indo",
+      "cancelReservation": "Cancelar reserva",
+      "reservationCancelled": "Reserva cancelada"
+    },
+    "toast": {
+      "reservationCancelledSuccess": "Reserva cancelada",
+      "listingReserved": "Anúncio reservado!",
+      "somethingWentWrong": "Algo deu errado."
+    },
+    "tripsPage": {
+      "unauthorizedTitle": "Não autorizado",
+      "unauthorizedSubtitle": "Por favor, faça login",
+      "noTripsTitle": "Nenhuma viagem encontrada",
+      "noTripsSubtitle": "Parece que você não reservou nenhuma viagem."
+    },
+    "listingCard": {
+      "cancelReservation": "Cancelar reserva"
+      }
   }
 }

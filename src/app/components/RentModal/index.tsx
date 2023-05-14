@@ -27,8 +27,7 @@ enum STEPS {
   PRICE = 5,
 }
 
-interface RentModalProps {}
-export const RentModal: React.FC<RentModalProps> = () => {
+export const RentModal = () => {
   const router = useRouter();
   const rentModal = useRentModal();
 

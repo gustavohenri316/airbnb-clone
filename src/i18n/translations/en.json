@@ -162,6 +162,26 @@
       "reserve": "Reserve",
       "total": "Total",
       "totalPrice": "$"
+    },
+    "trips": {
+      "title": "Trips",
+      "subtitle": "Where you've been and where you're going",
+      "cancelReservation": "Cancel reservation",
+      "reservationCancelled": "Reservation cancelled"
+    },
+    "toast": {
+      "reservationCancelledSuccess": "Reservation cancelled",
+      "listingReserved": "Listing reserved!",
+      "somethingWentWrong": "Something went wrong."
+    },
+    "tripsPage": {
+      "unauthorizedTitle": "Unauthorized",
+      "unauthorizedSubtitle": "Please login",
+      "noTripsTitle": "No trips found",
+      "noTripsSubtitle": "Looks like you haven't reserved any trips."
+    },
+    "listingCard": {
+      "cancelReservation": "Cancel reservation"
     }
   }
 }

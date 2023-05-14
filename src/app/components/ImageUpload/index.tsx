@@ -1,5 +1,6 @@
 "use client";
 
+import { ImageUploadProps } from "@/app/types";
 import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 import { useCallback } from "react";
@@ -10,11 +11,6 @@ declare global {
 }
 
 const uploadPreset = "gsnt0nnj";
-
-interface ImageUploadProps {
-  onChange: (value: string) => void;
-  value: string;
-}
 
 export const ImageUpload: React.FC<ImageUploadProps> = ({
   onChange,
