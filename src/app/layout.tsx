@@ -7,7 +7,8 @@ import { LoginModal } from "./components/LoginModal";
 import { Nunito } from "next/font/google";
 import getCurrentUser from "./actions/getCurrentUser";
 import "./globals.css";
-
+import { I18nextProvider } from "react-i18next";
+import i18n from "@/i18n";
 const font = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
