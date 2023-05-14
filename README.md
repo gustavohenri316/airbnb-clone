@@ -42,7 +42,7 @@ Features:
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/AntonioErdeljac/next13-airbnb-clone.git
+git clone https://github.com/gustavohenri316/airbnb-clone
 ```
 
 ### Install packages
@@ -84,4 +84,4 @@ Running commands with npm `npm run [command]`
 | `dev`   | Starts a development instance of the app |
 
 
-creditos: https://github.com/AntonioErdeljac
+## Créditos: https://github.com/AntonioErdeljac
