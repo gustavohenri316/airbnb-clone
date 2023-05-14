@@ -1,5 +1,7 @@
 {
   "translation": {
+    "Success": "Success",
+    "SomethingWentWrong": "Something went wrong.",
     "Beach": {
       "label": "Beach",
       "description": "This property is close to the beach!"
@@ -148,6 +150,11 @@
         "next": "Next",
         "back": "Back"
       }
+    },
+    "emptyState": {
+      "title": "No exact matches",
+      "subtitle": "Try changing or removing some of your filters",
+      "label": "Remove all filters"
     }
   }
 }

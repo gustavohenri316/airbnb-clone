@@ -1,6 +1,6 @@
-import { User } from "@prisma/client";
 import { IconType } from "react-icons";
 import { UseFormRegister, FieldValues, FieldErrors } from "react-hook-form";
+import { Listing, Reservation, User } from "@prisma/client";
 
 export type SafeUser = Omit<
   User,
@@ -14,6 +14,7 @@ export type SafeUser = Omit<
 export interface UserMenuProps {
   currentUser?: SafeUser | null;
 }
+
 export interface NavbarProps {
   currentUser?: SafeUser | null;
 }
@@ -30,6 +31,7 @@ export interface ButtonProps {
 export interface ClientOnlyProps {
   children: React.ReactNode;
 }
+
 export interface ContainerProps {
   children: React.ReactNode;
 }
@@ -62,7 +64,6 @@ export interface ModalStore {
   onClose: () => void;
 }
 
-
 export interface CategoryBoxProps {
   label: string;
   icon: IconType;
@@ -92,9 +93,36 @@ export interface CounterProps {
 export interface MapProps {
   center?: number[];
 }
+
 export interface CategoryInputProps {
   onClick: (value: string) => void;
   selected?: boolean;
   icon: IconType;
   label: string;
+}
+
+export interface ListingCardProps {
+  data: Listing;
+  reservation?: Reservation;
+  onAction?: (id: string) => void;
+  disabled?: boolean;
+  actionLabel?: string;
+  actionId?: string;
+  currentUser?: SafeUser | undefined | null;
+}
+
+export interface HeartButtonProps {
+  listingId: string;
+  currentUser: SafeUser | null | undefined;
+}
+
+export interface EmptyStateProps {
+  title?: string;
+  subtitle?: string;
+  showReset?: boolean;
+}
+
+export interface IUserFavorite {
+  listingId: string;
+  currentUser?: SafeUser | null | undefined;
 }

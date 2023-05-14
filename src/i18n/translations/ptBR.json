@@ -1,5 +1,7 @@
 {
   "translation": {
+    "Success": "Sucesso",
+    "Something went wrong.": "Algo deu errado.",
     "Beach": {
       "label": "Praia",
       "description": "Esta propriedade está perto da praia!"
@@ -148,6 +150,11 @@
         "next": "Próximo",
         "back": "Voltar"
       }
+    },
+    "emptyState": {
+      "title": "Nenhum resultado exato",
+      "subtitle": "Tente alterar ou remover alguns dos filtros",
+      "label": "Remover todos os filtros"
     }
   }
 }
