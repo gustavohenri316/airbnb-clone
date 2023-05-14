@@ -2,6 +2,20 @@ import { IconType } from "react-icons";
 import { UseFormRegister, FieldValues, FieldErrors } from "react-hook-form";
 import { Listing, Reservation, User } from "@prisma/client";
 
+export type SafeListing = Omit<Listing, "createdAt"> & {
+  createdAt: string;
+};
+
+export type SafeReservation = Omit<
+  Reservation,
+  "createdAt" | "startDate" | "endDate" | "listing"
+> & {
+  createdAt: string;
+  startDate: string;
+  endDate: string;
+  listing: SafeListing;
+};
+
 export type SafeUser = Omit<
   User,
   "createdAt" | "updatedAt" | "emailVerified"
@@ -102,8 +116,8 @@ export interface CategoryInputProps {
 }
 
 export interface ListingCardProps {
-  data: Listing;
-  reservation?: Reservation;
+  data: SafeListing;
+  reservation?: SafeReservation;
   onAction?: (id: string) => void;
   disabled?: boolean;
   actionLabel?: string;
@@ -125,4 +139,20 @@ export interface EmptyStateProps {
 export interface IUserFavorite {
   listingId: string;
   currentUser?: SafeUser | null | undefined;
+}
+
+export interface ListingClientProps {
+  reservations?: SafeReservation[];
+  listing: SafeListing & {
+    user: SafeUser;
+  };
+  currentUser?: SafeUser | null;
+}
+
+export interface ListingHeadProps {
+  title: string;
+  locationValue: string;
+  imageSrc: string;
+  id: string;
+  currentUser?: SafeUser | null;
 }
